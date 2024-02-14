@@ -1,0 +1,63 @@
+@media (min-width: 1024px) {
+  .main-container{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .container-setting {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: white;
+    color: white;
+    box-shadow: 5px 5px 10px 3px rgba(199, 195, 195, 0.5);
+    border-radius: 10px;
+  }
+
+  .input-container{
+    width: 20%;
+    background-image: url('https://cdn.wallpapersafari.com/67/42/4kDg1x.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center;
+  }
+
+  .shelf-container{
+    width: 75%;
+    background-image: url('https://th.bing.com/th/id/OIP.ZsuUpAKWC59B8dwiYr-XlgHaLH?w=320&h=480&rs=1&pid=ImgDetMain');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center;
+    color: black;
+  }
+
+  .shelf-border{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    border: solid 5px #6B3E26;
+    padding: 0.5rem;
+    overflow-x: auto;
+    width: calc(100% - 1,5rem);
+    height: 200px;
+  }
+
+  .shelf-item {
+    display: flex;
+    flex-shrink: 1;
+    flex-grow: 0;
+    border: black solid 1px;
+    padding: 0.25rem;
+    background: white;
+  }
+
+  .shelf-detail {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+  }
+
+  .input-form{
+    display: flex;
+    flex-direction: column;
+  }
+}
