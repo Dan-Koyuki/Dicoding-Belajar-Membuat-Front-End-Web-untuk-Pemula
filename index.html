@@ -10,12 +10,14 @@
   <link rel="stylesheet" href="./styles/large.css">
 </head>
 <body>
-  <main class="container">
+  <header>
     <h1>Irwanto's Bookshelf</h1>
+  </header>
+  <main class="container">
     <div class="main-container">
       <div id="inputField" class="input-container container-setting">
         <p>Input Book Info</p>
-        <form class="input-form">
+        <form class="input-form" id="book-form">
           <label>Title:</label>
           <input id="title" type="text"/>
           <label>Author:</label>
@@ -24,7 +26,9 @@
           <input id="years" type="number"/>
           <label style="text-align: center;">is complete</label>
           <input id="isComplete" type="checkbox"/>
-          <button>Add</button>
+          <button
+            type="submit"
+          >Add</button>
         </form>
       </div>
       <div id="displayField" class="shelf-container container-setting">
@@ -117,5 +121,9 @@
       </div>
     </div>
   </main>
+
+  <script src="./src/book.js"></script>
+  <script src="./src/crud.js"></script>
+  <script src="./src/main.js"></script>
 </body>
 </html>

@@ -23,11 +23,10 @@
 
   .shelf-container{
     width: 75%;
-    background-image: url('https://th.bing.com/th/id/OIP.ZsuUpAKWC59B8dwiYr-XlgHaLH?w=320&h=480&rs=1&pid=ImgDetMain');
+    background-image: url('https://th.bing.com/th/id/OIP.7Wuj-I67qLZ4idVoty3qGAHaEo?rs=1&pid=ImgDetMain');
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center center;
-    color: black;
   }
 
   .shelf-border{
@@ -48,6 +47,7 @@
     border: black solid 1px;
     padding: 0.25rem;
     background: white;
+    color: black;
   }
 
   .shelf-detail {
