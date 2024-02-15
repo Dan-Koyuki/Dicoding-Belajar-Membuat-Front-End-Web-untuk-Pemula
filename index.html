@@ -1,129 +1,71 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset='utf-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <title>Dan's Bookshelf</title>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link rel='stylesheet' type='text/css' media='screen' href='./styles/global.css'>
-  <link rel="stylesheet" href="./styles/small.css">
-  <link rel="stylesheet" href="./styles/large.css">
-</head>
-<body>
-  <header>
-    <h1>Irwanto's Bookshelf</h1>
-  </header>
-  <main class="container">
-    <div class="main-container">
-      <div id="inputField" class="input-container container-setting">
-        <p>Input Book Info</p>
-        <form class="input-form" id="book-form">
-          <label>Title:</label>
-          <input id="title" type="text"/>
-          <label>Author:</label>
-          <input id="author" type="text"/>
-          <label>Years:</label>
-          <input id="years" type="number"/>
-          <label style="text-align: center;">is complete</label>
-          <input id="isComplete" type="checkbox"/>
-          <button
-            type="submit"
-          >Add</button>
-        </form>
-      </div>
-      <div id="displayField" class="shelf-container container-setting">
-        <div id="searchBookField" class="search-field">
-          <input type="text"/>
-          <button>search</button>
-        </div>
-        <div id="unreadBookshelf">
-          <p>Unread Book</p>
-          <div id="bookshelf1" class="shelf-border">
-            <div class="shelf-item">
-              <div class="shelf-detail">
-                <p>Moonlight</p>
-                <p>Dan</p>
-                <p>2003</p>
-                <p>complete</p>
-              </div>
-            </div>
-            <div class="shelf-item">
-              <div class="shelf-detail">
-                <p>Moonlight</p>
-                <p>Dan</p>
-                <p>2003</p>
-                <p>complete</p>
-              </div>
-            </div>
-            <div class="shelf-item">
-              <div class="shelf-detail">
-                <p>Moonlight</p>
-                <p>Dan</p>
-                <p>2003</p>
-                <p>complete</p>
-              </div>
-            </div>
-            <div class="shelf-item">
-              <div class="shelf-detail">
-                <p>Moonlight</p>
-                <p>Dan</p>
-                <p>2003</p>
-                <p>complete</p>
-              </div>
-            </div>
-            <div class="shelf-item">
-              <div class="shelf-detail">
-                <p>Moonlight</p>
-                <p>Dan</p>
-                <p>2003</p>
-                <p>complete</p>
-              </div>
-            </div> 
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Dan's Bookshelf</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./styles/global.css"
+    />
+    <link rel="stylesheet" href="./styles/small.css" />
+    <link rel="stylesheet" href="./styles/large.css" />
+  </head>
+  <body>
+    <header>
+      <h1>My Bookshelf</h1>
+    </header>
+    <main class="container">
+      <div class="main-container">
+        <div id="inputField" class="input-container container-setting">
+          <div>
+            <p class="shelf-title">Input Book Info</p>
+            <form class="input-form" id="book-form">
+              <label for="title">Title: <input id="title" type="text" /></label>
+              <label for="author"
+                >Author: <input id="author" type="text"
+              /></label>
+              <label for="years">Years: <input id="years" type="number" /></label>
+              <label for="isComplete"
+                >Complete: <input id="isComplete" type="checkbox"
+              /></label>
+              <button type="submit">Add</button>
+            </form>
+          </div>
+          <div class="contact-container">
+            <p>My Profile <a href="https://dan-koyuki-profile.vercel.app">here.</a></p>
+            <p>Created by Irwanto Danang</p>
           </div>
         </div>
-        <div id="readBookshelf">
-          <p>Complete Read</p>
-          <div id="bookshelf2" class="shelf-border">
-            <div class="shelf-item">
-              <div class="shelf-detail">
-                <p>Moonlight</p>
-                <p>Dan</p>
-                <p>2003</p>
-                <p>complete</p>
-              </div>
-            </div>
-            <div class="shelf-item">
-              <div class="shelf-detail">
-                <p>Moonlight</p>
-                <p>Dan</p>
-                <p>2003</p>
-                <p>complete</p>
-              </div>
-            </div>
-            <div class="shelf-item">
-              <div class="shelf-detail">
-                <p>Moonlight</p>
-                <p>Dan</p>
-                <p>2003</p>
-                <p>complete</p>
-              </div>
-            </div>
-            <div class="shelf-item">
-              <div class="shelf-detail">
-                <p>Moonlight</p>
-                <p>Dan</p>
-                <p>2003</p>
-                <p>complete</p>
-              </div>
-            </div>
+        <div id="displayField" class="shelf-container container-setting">
+          <div id="searchBookField" class="search-field">
+            <input id="search" type="text"/>
+            <select id="filterOpt">
+              <option value="id">ID</option>
+              <option value="title">Title</option>
+              <option value="author">Author</option>
+              <option value="years">Years</option>
+            </select>
+            <button id="searchButton" type="button">Search</button>
+            <button id="clearButton" type="button">Clear</button>
+          </div>
+          <div id="unreadBookshelf">
+            <p class="shelf-title">Yet to Discover: Unread Books</p>
+            <div id="bookshelf1" class="shelf-border"></div>
+          </div>
+          <div id="readBookshelf">
+            <p class="shelf-title">Explored Realms: Read Collection</p>
+            <div id="bookshelf2" class="shelf-border"></div>
           </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <script src="./src/book.js"></script>
-  <script src="./src/crud.js"></script>
-  <script src="./src/main.js"></script>
-</body>
+    <script src="./src/book.js"></script>
+    <script src="./src/crud.js"></script>
+    <script src="./src/main.js"></script>
+  </body>
 </html>

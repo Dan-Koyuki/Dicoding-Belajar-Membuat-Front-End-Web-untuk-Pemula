@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=GFS+Neohellenic:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 body, html {
   margin: 0;
   padding: 0;
@@ -12,13 +14,122 @@ body, html {
 }
 
 h1{
+  font-size: 28px;
   text-align: center;
+  margin: 0.5rem;
 }
 
 p{
   margin: 0.25rem 0;
 }
 
+label{
+  margin: 0.25rem;
+}
+
 input{
   border-radius: 10px;
+  padding: 0.25rem;
+}
+
+.container-setting {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: white;
+  color: white;
+  box-shadow: 5px 5px 10px 3px rgba(199, 195, 195, 0.5);
+  border-radius: 10px;
+}
+
+.shelf-title{
+  font-size: 24px;
+  text-align: center;
+  margin: 0.5rem;
+}
+
+.shelf-border{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  border: solid 5px #6B3E26;
+  border-radius: 10px;
+  padding: 0.5rem;
+  overflow-x: auto;
+  width: calc(100% - 1,5rem);
+  height: 200px;
+}
+
+.shelf-item {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  flex-grow: 0;
+  padding: 0.25rem;
+  background: white;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 3px rgba(199, 195, 195, 0.5);
+}
+
+.shelf-detail {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+
+  p{
+    font-family: 'GFS Neohellenic', sans-serif;
+  }
+}
+
+.book-id, .book-years{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.book-title{
+  font-size: 24px;
+  font-weight: 500;
+  font-style: italic;
+  text-align: center;
+}
+
+.book-author{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.shelf-button{
+  display: flex;
+  gap: 10px;
+  height: 30px;
+  margin-top: 0.5rem;
+}
+
+.btn-move{
+  background: url('https://res.cloudinary.com/dankoyuki/image/upload/v1707990229/Icons/safx0co6tvlrug1f5l2x.png');
+  width: 20px;
+  height: auto;
+  border: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.btn-remove{
+  background: url('https://res.cloudinary.com/dankoyuki/image/upload/v1707990229/Icons/z3atn47f8o0meocdoqf7.png');
+  width: 20px;
+  height: auto;
+  border: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.input-form{
+  display: flex;
+  flex-direction: column;
 }
