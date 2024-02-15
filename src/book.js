@@ -19,8 +19,8 @@ const generateBook = (config) => {
     id: +new Date(),
     title: config.title,
     author: config.author,
-    years: config.years,
-    status: config.status
+    year: config.year,
+    isComplete: config.isComplete
   }
 
   return newBook;
@@ -58,7 +58,7 @@ const createElement = (book) => {
 
   const textYears = document.createElement('p');
   textYears.classList.add('book-years');
-  textYears.innerText = book.years;
+  textYears.innerText = book.year;
   
   // Container for Book Details
   const detailContainer = document.createElement('div');

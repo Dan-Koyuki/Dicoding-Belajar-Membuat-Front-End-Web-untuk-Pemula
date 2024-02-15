@@ -4,8 +4,8 @@
 const addBook = () => {
   const title = document.getElementById('title');
   const author = document.getElementById('author');
-  const years = document.getElementById('years');
-  const status = document.getElementById('isComplete');
+  const year = document.getElementById('years');
+  const isComplete = document.getElementById('isComplete');
   
   // ?Validation => Ensure that each field of Book Details is not Empty
   if (!title.value){
@@ -20,7 +20,7 @@ const addBook = () => {
     alert("Author cannot be empty!");
     return;
   }
-  if (!years.value){
+  if (!year.value){
     alert("Years cannot be empty!");
     return;
   }
@@ -29,8 +29,8 @@ const addBook = () => {
   const newBook = generateBook({
     title: title.value,
     author: author.value,
-    years: parseInt(years.value),
-    status: status.checked
+    year: parseInt(year.value),
+    isComplete: isComplete.checked
   });
 
   // ?Push Created Book to the collection
@@ -45,8 +45,8 @@ const addBook = () => {
   // ?Clear input field
   title.value = '';
   author.value = '';
-  years.value = '';
-  status.checked = false;
+  year.value = '';
+  isComplete.checked = false;
 }
 
 /**
@@ -74,7 +74,7 @@ const moveBook = (bookID) => {
   const bookTarget = BookCollection.findIndex(book => book.id === bookID);
 
   if (bookTarget !== -1){
-    BookCollection[bookTarget].status = !BookCollection[bookTarget].status
+    BookCollection[bookTarget].isComplete = !BookCollection[bookTarget].isComplete
   }
 
   document.dispatchEvent(new Event(RENDER_EVENT));
@@ -206,7 +206,7 @@ const findByAuthor = (bookAuthor) => {
 
 const findByYears = (bookYears) => {
   const filteredBook = JSON.parse(localStorage.getItem(KEY)).filter(book => {
-    return book.years === bookYears;
+    return book.year === bookYears;
   });
 
   // ? clear the array

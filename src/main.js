@@ -34,7 +34,7 @@ document.addEventListener(RENDER_EVENT, function () {
   if (searchField.value) {
     FilteredCollection.forEach(book => {
       const bookElement = createElement(book);
-      if (book.status){
+      if (book.isComplete){
         readBookList.append(bookElement);
       } else {
         unreadBookList.append(bookElement);
@@ -43,7 +43,7 @@ document.addEventListener(RENDER_EVENT, function () {
   } else {
     BookCollection.forEach(book => {
       const bookElement = createElement(book);
-      if (book.status){
+      if (book.isComplete){
         readBookList.append(bookElement);
       } else {
         unreadBookList.append(bookElement);
